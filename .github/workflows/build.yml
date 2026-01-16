@@ -12,7 +12,7 @@ jobs:
     - uses: subosito/flutter-action@v2
       with:
         flutter-version: '3.22.0'
-    - run: yes | flet build apk --project Solorunner --org com.solorunner.app main_single.py
+    - run: mv main_single.py main.py && yes | flet build apk --project Solorunner --org com.solorunner.app
     - uses: actions/upload-artifact@v4
       with:
         name: app-release
